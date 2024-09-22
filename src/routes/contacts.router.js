@@ -54,7 +54,7 @@ module.exports.setup = (app) => {
 
   /**
    * @swagger
-   * /api/v1/contacts:
+   *  /api/v1/contacts:
    *  post:
    *    summary: Create a new contact
    *    description: Create a new contact
@@ -65,25 +65,25 @@ module.exports.setup = (app) => {
    *          schema:
    *            $ref: '#/components/schemas/Contact'
    *
-   *      tags:
-   *        - contacts
-   *      responses:
-   *        201:
-   *          description: A new contact
-   *          content:
-   *            application/json:
-   *              schema:
-   *                type: object
-   *                properties:
-   *                  status:
-   *                    type: string
-   *                    description: The response status
-   *                    enum: [success]
-   *                  data:
-   *                    type: object
-   *                    properties:
-   *                      contact:
-   *                        $ref: '#/components/schemas/Contact'
+   *    tags:
+   *      - contacts
+   *    responses:
+   *      201:
+   *        description: A new contact
+   *        content:
+   *          application/json:
+   *            schema:
+   *              type: object
+   *              properties:
+   *                status:
+   *                  type: string
+   *                  description: The response status
+   *                  enum: [success]
+   *                data:
+   *                  type: object
+   *                  properties:
+   *                    contact:
+   *                      $ref: '#/components/schemas/Contact'
    */
   router.post("/", avatarUpload, contactsController.createContact);
 
